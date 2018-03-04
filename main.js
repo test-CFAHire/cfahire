@@ -35,7 +35,7 @@ cfa = {
             // center all components on page
             var center = function() {
                 var container = $('div.container');
-                container.css('margin-top', ((window.innerHeight - container.height()) / 2) - 60);
+                container.css('margin-top', ((window.innerHeight - container.height()) / 2) - 80);
 
                 var descriptionarea = $('div.description');
                 descriptionarea.css('width', (window.innerWidth - container.width()) / 2)

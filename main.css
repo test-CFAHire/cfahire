@@ -31,7 +31,7 @@ body{
 }
 h2,h3{
     margin:0;
-}
+}y
 a,a:active,a:hover,a:visited,a:-webkit-any-link{
     text-decoration: none;       
     color:inherit;
@@ -50,7 +50,7 @@ img.companylogo{
 }
 nav.menu{
     text-align: right;
-    position: fixed;
+    
     width:100%;
     color:#bbb;
 }
@@ -102,7 +102,6 @@ a.target{
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
     border:1px solid rgba(255,255,255,0.2);
     transition: box-shadow .25s, color .5s, border .5s, padding .5s;
-
 }
 a.target:hover{
     box-shadow: 0 10px 15px rgba(0,0,0,0.2);
@@ -147,7 +146,7 @@ a.target:hover{
     cursor: pointer;
     transition: opacity 0.5s linear;
     margin: 0 4px;
-    opacity: 0.75;
+    opacity: 0.55;
 }
 
 .container .landing-banner:nth-child(1) {
@@ -155,13 +154,28 @@ a.target:hover{
     margin-left: 0px;
     margin-bottom: -75px;
 }
+.container > hgroup h3{
+    padding: 8px 0;
+    text-align: center;
+    color:#802323;
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.5rem;
+}
+.container > hgroup p{
+    color: #fff;
+    text-align: center;
+    margin: 2px;
+    font-family: 'Krona One', sans-serif;
+    margin-bottom: 8px;
+}
 
 .container .hexagon:hover {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 .container .landing-banner .landing-title a.target{
     opacity:0;
     transition: opacity 1s;
+    animation :pulse 2s infinite;
 }
 .container .landing-banner:hover .landing-title a.target{
     opacity: 1;
@@ -234,7 +248,7 @@ table.links tr td nav{
     width: 100%;
     
 }
-table.links tr td a{
+table.links tr td .social{
     color:#fff;
     padding: 8px;
     cursor: pointer;
