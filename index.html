@@ -1,289 +1,105 @@
 <html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-<head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-</head>
+        <link href="main.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="main.js"></script>
+        <script>
+            $(function() { cfa.home.init(); })
+        </script>
+    </head>
 
-<body>
-    <article style="pointer-events:none;" class="overlay">
-        <img class="cfa-bg" src="background_cfa.png" />
-    </article>
-    <div class="description right">
-        <hgroup>
-            <h3>PUMP</h3>
-            <h2>HIRE</h2>
-        </hgroup>
-        <article>
-            <img/>
+    <body>
+        <header>
+            <a href="/"><img class="companylogo" src="" alt="CFAHire" /></a>
+            <nav class="menu">
+                <div><a href="/">Home</a></div>
+                <div><a>Products</a> 
+                    <nav class="submenu"> 
+                        <div><a href="/rig.html" >Rig hire</a></div> 
+                        <div><a href="/drum.html" >Drum Hire</a></div> 
+                        <div><a href="/pump.html" >Pump Hire</a></div> 
+                    </nav> 
+                </div>
+                <div><a href="/about.html">About</a></div>
+                <div><a href="/personnel.html">Personnel</a></div>
+                <div><a href="contact.html" >Contact</a></div>
+            </nav>
+        </header>
+        <!-- Background(overlay) image -->
+        <article style="pointer-events:none;" class="overlay">
+            <img class="cfa-bg" src="background_cfa.png" />
         </article>
-    </div>
-    <div class="description mid">
-        <hgroup>
-            <h3>RIG</h3>
-            <h2>HIRE</h2>
-        </hgroup>
-        <article>
-            <img/>
-        </article>
-    </div>
-    <div class="description left">
-        <hgroup>
-            <h3>DRUM</h3>
-            <h2>HIRE</h2>
-        </hgroup>
-        <article>
-            <img/>
-        </article>
-    </div>
-    <div class="container">
-        <article class="landing-banner rig"><img data-id="1" src="hexagon.png" class="hexagon" />
-            <div class="landing-title">
-                <h2>RIG HIRE</h2>
-                <p>Some words about pump hire</p>
-            </div>
-        </article>
-        <article class="landing-banner drum"><img data-id="2" src="hexagon.png" class="hexagon" />
-            <div class="landing-title">
-                <h2>DRUM HIRE</h2>
-                <p>Some words about pump hire</p>
-            </div>
-        </article>
-        <article class="landing-banner pump"><img data-id="3" src="hexagon.png" class="hexagon" />
-            <div class="landing-title">
-                <h2>PUMP HIRE</h2>
-                <p>Some words about pump hire</p>
-            </div>
-        </article>
-        <br />
-        <a href="#" class="target magT50" name="btnContact">CONTACT US</a>
-    </div>
-</body>
-
+        <!-- Individual descriptions for each item -->
+        <div class="description right">
+            <hgroup>
+                <h3>PUMP</h3>
+                <h2>HIRE</h2>
+            </hgroup>
+            <article class="content">
+                <img src="" alt="PumpImage"/>
+                <p>some text about rigs</p>
+            </article>
+        </div>
+        <div class="description mid">
+            <hgroup>
+                <h3>RIG</h3>
+                <h2>HIRE</h2>
+            </hgroup>
+            <article class="content">
+                <img src="" alt="RigImage"/>
+                <p>some text about rigs</p>
+            </article>
+        </div>
+        <div class="description left">
+            <hgroup>
+                <h3>DRUM</h3>
+                <h2>HIRE</h2>
+            </hgroup>
+            <article class="content">
+                <img src="" alt="DrumImage"/>
+                <p>some text about drums</p>
+            </article>
+        </div>
+        <!-- Main visible content area  -->
+        <div class="container">
+            <article data-page="rig" class="landing-banner rig"><img data-id="1" src="hexagon.png" class="hexagon" />
+                <div class="landing-title">
+                    <h2>RIG HIRE</h2>
+                    <p>Some words about pump hire</p>
+                    <br/>
+                    <a class="target">Read More</a>
+                </div>
+            </article>
+            <article data-page="drum" class="landing-banner drum"><img data-id="2" src="hexagon.png" class="hexagon" />
+                <div class="landing-title">
+                    <h2>DRUM HIRE</h2>
+                    <p>Some words about pump hire</p>
+                    <br/>
+                    <a class="target">Read More</a>
+                </div>
+            </article>
+            <article data-page="pump" class="landing-banner pump"><img data-id="3" src="hexagon.png" class="hexagon" />
+                <div class="landing-title">
+                    <h2>PUMP HIRE</h2>
+                    <p>Some words about pump hire</p>
+                    <br/>
+                    <a class="target">Read More</a>
+                </div>
+            </article>            
+        </div>
+        <table class="links" >
+            <tr>
+                <td></td>
+                <td>
+                    <a href="/contact.html" class="target magT50" name="btnContact">CONTACT US</a>
+                    <nav>
+                        <a>t</a><a>f</a><a>e</a>
+                    </nav>                    
+                </td>
+                <td></td>
+            </tr>
+        </table>            
+    </body>
 </html>
-
-
-<style>
-    @import url('https://fonts.googleapis.com/css?family=PT+Sans');
-    @import url('https://fonts.googleapis.com/css?family=Krona+One');
-    
-    * {
-        box-sizing: border-box;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-kerning: auto;
-        -webkit-text-size-agjust: auto;
-    }
-
-    html,
-    body {
-        height:100vh;
-        width:100vw;
-        padding: 0;
-        margin: 0;
-        font-family: 'PT Sans', sans-serif;
-        background: #121212;
-    }
-    body{
-        position: absolute;
-        top:0;
-        bottom:0;
-        right:0;
-        left:0;
-        overflow-x: hidden;
-        z-index: 1;
-        
-    }
-    h2,h3{
-        margin:0;
-    }
-    a,a:active,a:hover,avisited{
-        text-decoration: none;        
-    }
-    .overlay{
-        height:100%;
-        width:100%;
-        overflow: hidden;
-        position: fixed;
-        pointer-events: none !important;
-    }
-    .cfa-bg{
-        width:100%;
-        position: absolute;
-        pointer-events: none;
-        z-index: 0;
-        opacity: 0.1;
-    }
-    .magT50{
-        margin-top: 50px !important;
-    }
-    a.target{
-        color:rgba(255,255,255,0.65);
-        border-radius: 5px;
-        font-size: 1.2rem;
-        padding: 10px 40px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.4);
-        border:1px solid rgba(255,255,255,0.2);
-        transition: box-shadow .25s, color .5s, border .5s, padding .5s;
-        
-    }
-    a.target:hover{
-        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-        color:rgba(255,255,255,0.9); 
-        border:1px solid rgba(255,255,255,0.9);
-        padding: 14px 48px;
-    }
-    .container {
-        display: table;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .landing-banner{
-        display: inline-block;
-        position: relative;
-    }
-    
-    .landing-title{
-        position: absolute;
-        top:0;
-        bottom:0;
-        right:0;
-        left:0;
-        text-align: center;
-        margin: auto;
-        height:50px;
-        pointer-events: none;
-        color:#fff;
-    }
-    .landing-title h2{    
-        transition: font-size .25s ease-in-out;
-    }
-    .landing-title p{
-        color:#8a8a8a;
-        margin:4px;     
-        transition: font-size .5s ease-in-out;
-    }
-    .container .hexagon {
-        width: 350px;
-        display: inline-block;
-        background-size: 100%;
-        cursor: pointer;
-        transition: opacity 0.5s linear;
-        margin: 0 4px;
-        opacity: 0.75;
-    }
-
-    .container .landing-banner:nth-child(1) {
-        display: block;
-        margin-left: 0px;
-        margin-bottom: -92px;
-    }
-
-    .container .hexagon:hover {
-        opacity: 0.5;
-    }
-    .container .landing-banner:hover .landing-title p{
-        font-size: 1.2rem;
-    }
-    .container .landing-banner:hover .landing-title h2{
-        font-size: 2rem;
-    }
-    @keyframes pulse{
-        0%{ border: 1px solid rgba(255,255,255,0.1); }
-        50%{ border: 1px solid  rgba(255,255,255,0.35); }
-        100%{ border: 1px solid  rgba(255,255,255,0.1); }
-    }
-    div.description{
-        position: absolute;
-        height: 100%;
-        margin: auto;
-        transition: opacity 1s;
-        opacity:0;  
-        width:20vw;
-        margin-left: 5vw;
-        margin-right: 5vw;
-        height:80vh;
-        box-shadow: 0 15px 10px rgba(0,0,0,0.2);
-        margin-top: 10vh;
-        /*background: rgba(0,0,0,0.1);*/
-        border:1px solid rgba(255,255,255,0.1);
-        animation: pulse 4s infinite ease-in-out;
-    }
-    div.description h3{
-        font-family: 'Krona One', sans-serif;
-        margin-left: -30px;
-        color:#fff;
-        font-size: 2.5rem;
-        margin-top: 16px;
-    }
-     div.description h2{
-        font-family: 'Krona One', sans-serif;
-        margin-left: -30px;
-        color:#802323;
-        font-size: 1.5rem;
-    }
-    div.description.right,div.description.mid{
-        right:0;
-    }
-    div.description.left{
-        left:0;
-    }
-    [name=btnContact]{
-        display:inline-block;
-        margin:8px;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-</style>
-
-<script>
-    cfa = {
-        hexover1: function() {
-            $('div.description.mid').css('opacity','1');
-        },
-        hexover2: function() {
-             $('div.description.left').css('opacity','1');            
-        },
-        hexover3: function() {
-            $('div.description.right').css('opacity','1');
-        },
-        hexleave1: function() {
-            $('div.description.mid').css('opacity','0');
-        },
-        hexleave2: function() {
-            $('div.description.left').css('opacity','0');
-        },
-        hexleave3: function() {
-            $('div.description.right').css('opacity','0');
-        },
-        init: function() {
-            $('img.hexagon').on('mouseover', function(e) {
-                var functions = [ cfa.hexover1, cfa.hexover2, cfa.hexover3 ];
-
-                var selhex = parseInt($(this).attr('data-id'));
-                functions[selhex - 1]();
-            });
-            
-            $('img.hexagon').on('mouseleave', function(e) {
-                var functions = [ cfa.hexleave1, cfa.hexleave2, cfa.hexleave3 ];
-
-                var selhex = parseInt($(this).attr('data-id'));
-                functions[selhex - 1]();
-            });
-        }
-    }
-    $(function() {
-        var center = function() {
-            var container = $('div.container');
-            container.css('margin-top', ((window.innerHeight - container.height()) / 2));
-            
-            var descriptionarea = $('div.description');
-            descriptionarea.css('width', (window.innerWidth - container.width()) / 2)
-        }
-        center();
-        window.onresize = center;
-        cfa.init()
-    })
-
-</script>

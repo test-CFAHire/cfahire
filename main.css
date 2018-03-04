@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Krona+One');
+
+* {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+    -webkit-text-size-agjust: auto;
+}
+
+html,
+body {
+    height:100vh;
+    width:100vw;
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+    background: #121212;
+}
+body{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    overflow-x: hidden;
+    z-index: 1;
+
+}
+h2,h3{
+    margin:0;
+}
+a,a:active,a:hover,a:visited,a:-webkit-any-link{
+    text-decoration: none;       
+    color:inherit;
+}
+header{
+    z-index: 1000;        
+}
+img.companylogo{
+    float:left;
+    min-height: 50px;
+    min-width: 50px;
+    margin:8px;
+    color:#802323;
+    font-family: 'Krona One', sans-serif;
+    font-size: 1rem;
+}
+nav.menu{
+    text-align: right;
+    position: fixed;
+    width:100%;
+    color:#bbb;
+}
+nav.menu div{
+    display: inline-block;
+}
+nav.menu div a{
+    padding: 8px 16px;
+    display: block;
+    cursor: pointer;
+    transition: font-size 1s;
+}
+nav.menu div a:hover{
+    color:#fff;
+}
+nav.menu div nav.submenu{
+    display: none;
+}
+nav.menu div:hover nav.submenu{
+    display: block;
+    position: absolute;
+}
+nav.submenu div{
+    text-align: left;
+    display: block;
+}
+.overlay{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    position: fixed;
+    pointer-events: none !important;
+}
+.cfa-bg{
+    width:100%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.2;
+}
+.magT50{
+    margin-top: 50px !important;
+}
+a.target{
+    color:rgba(255,255,255,0.65);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 10px 40px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    border:1px solid rgba(255,255,255,0.2);
+    transition: box-shadow .25s, color .5s, border .5s, padding .5s;
+
+}
+a.target:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    color:rgba(255,255,255,0.9); 
+    border:1px solid rgba(255,255,255,0.9);
+    padding: 14px 48px;
+}
+.container {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+.landing-banner{
+    display: inline-block;
+    position: relative;
+}
+
+.landing-title{
+    position: absolute;
+    top:0;
+    bottom:40;
+    right:0;
+    left:0;
+    text-align: center;
+    margin: auto;
+    height:50px;
+    pointer-events: none;
+    color:#fff;
+}
+.landing-title h2{    
+    transition: font-size .25s ease-in-out;
+}
+.landing-title p{
+    color:#8a8a8a;
+    margin:4px;     
+    transition: font-size .5s ease-in-out;
+}
+.container .hexagon {
+    width: 300px;
+    display: inline-block;
+    background-size: 100%;
+    cursor: pointer;
+    transition: opacity 0.5s linear;
+    margin: 0 4px;
+    opacity: 0.75;
+}
+
+.container .landing-banner:nth-child(1) {
+    display: block;
+    margin-left: 0px;
+    margin-bottom: -75px;
+}
+
+.container .hexagon:hover {
+    opacity: 0.5;
+}
+.container .landing-banner .landing-title a.target{
+    opacity:0;
+    transition: opacity 1s;
+}
+.container .landing-banner:hover .landing-title a.target{
+    opacity: 1;
+}
+.container .landing-banner:hover .landing-title p{
+    font-size: 1.2rem;
+}
+.container .landing-banner:hover .landing-title h2{
+    font-size: 2rem;
+}
+@keyframes pulse{
+    0%{ border: 1px solid rgba(255,255,255,0.1); }
+    50%{ border: 1px solid  rgba(255,255,255,0.35); }
+    100%{ border: 1px solid  rgba(255,255,255,0.1); }
+}
+div.description{
+    pointer-events: none;
+    position: absolute;
+    height: 100%;
+    margin: auto;
+    transition: opacity 1s;
+    opacity:0;  
+    width:20vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height:80vh;
+    box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+    margin-top: 10vh;
+    border:1px solid rgba(255,255,255,0.1);
+    animation: pulse 4s infinite ease-in-out;
+}
+div.description h3{
+    font-family: 'Krona One', sans-serif;
+    margin-left: -30px;
+    color:#fff;
+    font-size: 2.5rem;
+    margin-top: 16px;
+}
+ div.description h2{
+    font-family: 'Krona One', sans-serif;
+    margin-left: -30px;
+    color:#802323;
+    font-size: 1.5rem;
+}
+div.description.right,div.description.mid{
+    right:0;
+}
+div.description.left{
+    left:0;
+}
+div.description .content{
+    padding: 8px 16px;
+    color:#fff;
+}
+[name=btnContact]{
+    display:inline-block;
+    margin:8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+table.links{
+    width:100%;
+    table-layout: fixed; 
+    /*border-top: 1px solid #802323;*/
+}
+table.links tr td{
+    text-align: center;
+}
+table.links tr td nav{
+    width: 100%;
+    
+}
+table.links tr td a{
+    color:#fff;
+    padding: 8px;
+    cursor: pointer;
+    
+}
