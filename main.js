@@ -1,4 +1,20 @@
 cfa = {
+    nav:{
+        base:'/cfahire/',
+        //base:'/',
+        
+        init: function(){
+            $('[data-page]').on('click', cfa.nav.relocate);
+        },
+        
+        relocate: function(e){
+            var target = $(e.target).attr('data-page');
+            
+            if(target || target === ''){
+                window.location.href = cfa.nav.base + $(e.currentTarget).attr('data-page');
+            }
+        }
+    },
     // functions for home page of cfa site
     home: {
         // functions for deciding which overlay to display
@@ -10,7 +26,7 @@ cfa = {
         hexleave3: function() { $('div.description.right').css('opacity','0'); },
         
         // init function 
-        init: function() {
+        init: function() {            
             // on mouse over of hexagon
             $('img.hexagon').on('mouseover', function(e) {
                 var functions = [ cfa.home.hexover1, cfa.home.hexover2, cfa.home.hexover3 ];
@@ -26,11 +42,11 @@ cfa = {
                 functions[selhex - 1]();
             });
             // on click of hexagon
-            $('article.landing-banner').on('click', function(e){
+            /*$('article.landing-banner').on('click', function(e){
                 var page = $(e.currentTarget).attr('data-page');;
 
-                window.location.href = '/' + page + '.html';
-            });
+                window.location.href = cfa.nav.base + page + '.html';
+            });*/
             
             // center all components on page
             var center = function() {
@@ -64,4 +80,6 @@ cfa = {
         init:function(){}
     }
 }
+
+$(function(){ cfa.nav.init(); });
 

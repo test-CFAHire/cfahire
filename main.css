@@ -251,6 +251,11 @@ table.links tr td nav{
 table.links tr td .social{
     color:#fff;
     padding: 8px;
+    cursor: pointer;    
+}
+[data-page]{
     cursor: pointer;
-    
+}
+[data-page] * {
+    pointer-events: none;
 }
