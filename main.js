@@ -28,14 +28,14 @@ cfa = {
         // init function 
         init: function() {            
             // on mouse over of hexagon
-            $('img.hexagon').on('mouseover', function(e) {
+            $('article.landing-banner').on('mouseover', function(e) {
                 var functions = [ cfa.home.hexover1, cfa.home.hexover2, cfa.home.hexover3 ];
 
                 var selhex = parseInt($(this).attr('data-id'));
                 functions[selhex - 1]();
             });
             // on mouse leave of hexagon
-            $('img.hexagon').on('mouseleave', function(e) {
+            $('article.landing-banner').on('mouseleave', function(e) {
                 var functions = [ cfa.home.hexleave1, cfa.home.hexleave2, cfa.home.hexleave3 ];
 
                 var selhex = parseInt($(this).attr('data-id'));

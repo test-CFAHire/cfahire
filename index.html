@@ -5,9 +5,6 @@
 
         <link href="main.css" type="text/css" rel="stylesheet"/>
         <script type="text/javascript" src="main.js"></script>
-        <script>
-            $(function() { cfa.home.init(); })
-        </script>
     </head>
 
     <body>
@@ -16,7 +13,8 @@
             <img class="cfa-bg" src="background_cfa.png" />
         </article>        
         <header>
-            <a href="#" data-page="" ><img class="companylogo" src="" alt="CFAHire" /></a>
+            <a href="#" data-page="" >
+                <img class="companylogo" src="" alt="CFAHire" /></a>
             <nav class="menu">
                 <div><a href="#" data-page="" >Home</a></div>
                 <div><a>Products</a> 
@@ -39,7 +37,7 @@
             </hgroup>
             <article class="content">
                 <img src="" alt="PumpImage"/>
-                <p>some text about rigs</p>
+                <p>CFA Plant Hire can organise for any size concrete Pump to suit your needs, along with this we can organise procurement of concrete and cages to feet your specification.</p>
             </article>
         </div>
         <div class="description mid">
@@ -49,7 +47,9 @@
             </hgroup>
             <article class="content">
                 <img src="" alt="RigImage"/>
-                <p>some text about rigs</p>
+                <p>CFA Plant Hire has a small range of soilmec Rigs that are available to hire.</p>
+                <p>With 33 years experience piling and foundation works, we look to provide a 360 service.</p>
+                <p>We can arrange transport, project management and labour along with all accessories / tools required to get your job done!</p>
             </article>
         </div>
         <div class="description left">
@@ -59,33 +59,36 @@
             </hgroup>
             <article class="content">
                 <img src="" alt="DrumImage"/>
-                <p>some text about drums</p>
+                <p>CFA Plant Hire can organise for any size Drum to suit your needs.</p>
             </article>
         </div>
         <!-- Main visible content area  -->
         <div class="container">
-            <article data-page="rig.html" class="landing-banner rig"><img data-id="1" src="hexagon.png" class="hexagon" />
+            <article data-id="1" data-page="rig.html" class="landing-banner rig">
+                <img src="hexagon.png" class="hexagon" />
                 <div class="landing-title">
                     <h2>RIG HIRE</h2>
                     <p>Some words about pump hire</p>
                     <br/>
-                    <a class="target">Read More</a>
+                    <a class="target">Find Out More</a>
                 </div>
             </article>
-            <article data-page="drum.html" class="landing-banner drum"><img data-id="2" src="hexagon.png" class="hexagon" />
+            <article data-id="2" data-page="drum.html" class="landing-banner drum">
+                <img src="hexagon.png" class="hexagon" />
                 <div class="landing-title">
                     <h2>DRUM HIRE</h2>
                     <p>Some words about pump hire</p>
                     <br/>
-                    <a class="target">Read More</a>
+                    <a class="target">Find Out More</a>
                 </div>
             </article>
-            <article data-page="pump.html" class="landing-banner pump"><img data-id="3" src="hexagon.png" class="hexagon" />
+            <article data-id="3" data-page="pump.html" class="landing-banner pump">
+                <img src="hexagon.png" class="hexagon" />
                 <div class="landing-title">
                     <h2>PUMP HIRE</h2>
                     <p>Some words about pump hire</p>
                     <br/>
-                    <a class="target">Read More</a>
+                    <a class="target">Find Out More</a>
                 </div>
             </article>            
         </div>
@@ -95,11 +98,14 @@
                 <td>
                     <a data-page="contact.html" href="#" class="target magT50" name="btnContact">CONTACT US</a>
                     <nav>
-                        <a class="social">t</a><a class="social">f</a><a class="social">e</a>
+                        <a class="social twitter">t</a><a class="social facebook">f</a><a class="social email" href="mailto:test@test.null?subject=CFA%20Hire">e</a>
                     </nav>                    
                 </td>
                 <td></td>
             </tr>
         </table>            
     </body>
+     <script>
+        $(function() { cfa.home.init(); })
+    </script>
 </html>
